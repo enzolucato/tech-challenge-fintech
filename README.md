@@ -34,3 +34,7 @@ Para comprovar o funcionamento do contrato, simulamos a entrada de um lote corro
 
 #### Resultado Esperado:
 O pipeline dispara uma exceção pa.errors.SchemaErrors, interrompendo o fluxo de ingestão e direcionando as mensagens com falhas para uma fila de tratamento de erros (Dead Letter Queue — DLQ), garantindo que nenhum dado ruim chegue à camada de predição.
+
+🚀 Instalar dependências:
+   ```bash
+   pip install -r requirements.txt
