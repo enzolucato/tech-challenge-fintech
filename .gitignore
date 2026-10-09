@@ -1,0 +1,14 @@
+Cache do Python
+pycache/
+*.pyc
+*.pyo
+*.pyd
+
+Ambientes virtuais
+.venv/
+env/
+venv/
+
+Ficheiros do VS Code / IDE
+.vscode/
+.idea/
