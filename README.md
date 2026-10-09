@@ -38,3 +38,16 @@ O pipeline dispara uma exceção pa.errors.SchemaErrors, interrompendo o fluxo d
 🚀 Instalar dependências:
    ```bash
    pip install -r requirements.txt
+ ```
+
+Treinar o modelo baseline e gerar dados de referência:
+
+ ```Bash
+python src/train.py
+ ```
+
+Testar o bloqueio e validação do contrato de dados:
+
+ ```Bash
+python src/validate_ingestion.py
+ ```
