@@ -1,11 +1,13 @@
-## 🛡️ Validação de Dados, Contratos e Modelo Baseline
+# 🏦 Fintech Credit Scoring — Observabilidade Contínua e Governança
+
+## 🛡️ Etapa 1 — Validação de Dados, Contratos e Modelo Baseline
 
 ### 🎯 Objetivo
-Garantir a integridade dos dados na camada de ingestão (Data Quality First) através da definição de contratos rígidos, impedindo que dados inconsistentes ou anómalos alimentem o modelo de *Credit Scoring*.
+Garantir a integridade dos dados na camada de ingestão (Data Quality First) através da definição de contratos rígidos, impedindo que dados inconsistentes ou anômalos alimentem o modelo de Credit Scoring.
 
 ---
 
-### 📋 Contrato de Dados (src/contracts.py)
+### 📜 Contrato de Dados (src/contracts.py)
 Utilizamos a biblioteca *Pandera* para definir o esquema estrito de validação do lote de dados de entrada.
 
 #### Regras de Validação Aplicadas:
@@ -35,10 +37,14 @@ Para comprovar o funcionamento do contrato, simulamos a entrada de um lote corro
 #### Resultado Esperado:
 O pipeline dispara uma exceção pa.errors.SchemaErrors, interrompendo o fluxo de ingestão e direcionando as mensagens com falhas para uma fila de tratamento de erros (Dead Letter Queue — DLQ), garantindo que nenhum dado ruim chegue à camada de predição.
 
-🚀 Instalar dependências:
-   ```bash
-   pip install -r requirements.txt
- ```
+---
+
+### 🚀 Como Executar
+
+1. *Instalar dependências:*
+```bash
+pip install -r requirements.txt
+```
 
 Treinar o modelo baseline e gerar dados de referência:
 
