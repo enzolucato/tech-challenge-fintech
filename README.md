@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 # 🏦 Fintech Credit Scoring — Observabilidade Contínua e Governança
 
 ## 🛡️ Etapa 1 — Validação de Dados, Contratos e Modelo Baseline
@@ -180,8 +179,3 @@ Testar o bloqueio e validação do contrato de dados:
  ```Bash
 python src/validate_ingestion.py
  ```
-<<<<<<< HEAD
->>>>>>> ecf35cc72ef2c7d46de3c1933c00555c1235f302
-=======
->>>>>>> c29212e (Atualiza projeto com novos ficheiros)
->>>>>>> temporaria
