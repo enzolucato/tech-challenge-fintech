@@ -3,6 +3,10 @@ numpy>=1.24.0
 scikit-learn>=1.3.0
 xgboost>=2.0.0
 pandera>=0.18.0
+<<<<<<< HEAD
 joblib>=1.3.0
 evidently>=0.4.0
 scipy>=1.10.0
+=======
+joblib>=1.3.0
+>>>>>>> ecf35cc72ef2c7d46de3c1933c00555c1235f302
