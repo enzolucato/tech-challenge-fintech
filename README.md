@@ -118,7 +118,6 @@ Testar o bloqueio e validação do contrato de dados:
  ```Bash
 python src/validate_ingestion.py
  ```
->>>>>>> temporaria
 =======
 # 🏦 Fintech Credit Scoring — Observabilidade Contínua e Governança
 
