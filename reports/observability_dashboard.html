@@ -1,0 +1,48 @@
+
+    <html>
+    <head>
+        <title>Dashboard de Observabilidade - Fintech Credit</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 30px; background-color: #f8fafc; color: #1e293b; }
+            .container { max-width: 950px; margin: auto; background: white; padding: 35px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
+            h1 { color: #0f172a; border-bottom: 3px solid #3b82f6; padding-bottom: 12px; }
+            .card { background: #f1f5f9; padding: 20px; margin: 20px 0; border-radius: 8px; border-left: 6px solid #3b82f6; }
+            .alert { border-left-color: #ef4444; background: #fef2f2; }
+            table { border-collapse: collapse; width: 100%; margin-top: 15px; }
+            th, td { border: 1px solid #cbd5e1; padding: 12px; text-align: left; }
+            th { background-color: #3b82f6; color: white; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>🔍 Dashboard de Observabilidade & Monitoramento Contínuo</h1>
+            <p><b>Última Sincronização do Pipeline:</b> 2026-10-27 20:45:45</p>
+            
+            <div class="card">
+                <h3>📊 Saúde da Infraestrutura & Execução do Pipeline</h3>
+                <ul>
+                    <li><b>Ambiente de Execução:</b> Python 3.13 (Isolado em <code>venv</code>)</li>
+                    <li><b>Status da Ingestão de Dados:</b> SUCCESS (Data Contracts Enforced)</li>
+                    <li><b>Registo do Modelo:</b> LOADED (Baseline XGBoost/Sklearn)</li>
+                    <li><b>Latência Média Operacional:</b> 0.38 segundos</li>
+                </ul>
+            </div>
+
+            <div class="card alert">
+                <h3>🚨 Painel de Alertas e Degradação do Modelo</h3>
+                <ul>
+                    <li><b>Alerta Ativo:</b> Drift estatístico significativo detetado nas features <code>age</code> e <code>income</code>.</li>
+                    <li><b>Ação Recomendada:</b> Executar retreinamento do modelo baseline com os dados atualizados de produção.</li>
+                </ul>
+            </div>
+
+            <h3>📈 Métricas de Volume e Carga Processada</h3>
+            <table>
+                <tr><th>Componente / Dataset</th><th>Registros Processados</th><th>Status</th></tr>
+                <tr><td>Dataset de Referência (Treino)</td><td>5000</td><td>✅ Íntegro</td></tr>
+                <tr><td>Dataset de Produção (Inferência)</td><td>5000</td><td>⚠️ Com Drift</td></tr>
+            </table>
+        </div>
+    </body>
+    </html>
+    

@@ -1,0 +1,26 @@
+{
+    "timestamp": "2026-10-27 20:45:45",
+    "infrastructure_status": {
+        "python_version": "3.13",
+        "virtual_env_active": true,
+        "storage_disk_status": "Healthy"
+    },
+    "pipeline_health": {
+        "ingestion_status": "SUCCESS (Data Contracts Enforced)",
+        "model_registry_status": "LOADED (Baseline XGBoost/Sklearn)",
+        "drift_detection_status": "COMPLETED (KS-Test Active)"
+    },
+    "operational_metrics": {
+        "reference_dataset_rows": 5000,
+        "production_dataset_rows": 5000,
+        "pipeline_latency_seconds": 0.38,
+        "error_rate_percentage": 0.0
+    },
+    "alerts_triggered": [
+        {
+            "metric": "Data Drift em 'age' e 'income'",
+            "severity": "CRITICAL",
+            "status": "ACTIVE (Alerta Disparado)"
+        }
+    ]
+}
