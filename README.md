@@ -1,5 +1,5 @@
 
-# 🏦 Fintech Credit Scoring — Observabilidade Contínua e Governança
+## 🏦 Fintech Credit Scoring — Observabilidade Contínua e Governança
 
 ## 🛡️ Etapa 1 — Validação de Dados, Contratos e Modelo Baseline
 
