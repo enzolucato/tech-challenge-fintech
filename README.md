@@ -58,3 +58,34 @@ Testar o bloqueio e validação do contrato de dados:
  ```Bash
 python src/validate_ingestion.py
  ```
+
+# 1. Clonar o repositório e entrar na pasta do projeto
+
+ ```Bash
+cd tech-challenge-fintech-main
+ ```
+
+# 2. Criar o ambiente virtual (venv) limpo
+
+```Bash
+python -m venv venv
+```
+
+# 3. Ativar o ambiente virtual no Windows (PowerShell)
+
+```Bash
+.\venv\Scripts\Activate.ps1
+```
+
+# 4. Atualizar o pip e instalar todas as dependências exigidas
+
+```Bash
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+# 5. Executar o script de simulação e detecção de Data Drift (Etapa 2)
+
+```Bash
+python src/drift_simulation.py
+```
