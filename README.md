@@ -89,7 +89,7 @@ pip install -r requirements.txt
 ```Bash
 python src/drift_simulation.py
 ```
-##🔍  Observabilidade de Pipelines, Infraestrutura e Modelos
+🔍  Observabilidade de Pipelines, Infraestrutura e Modelos
 
 Nesta etapa, centralizamos os logs, as métricas operacionais e a saúde do pipeline, garantindo a visibilidade completa do sistema em produção.
 
@@ -99,4 +99,5 @@ Com o ambiente virtual (`venv`) ativo, execute o script de inferência, sustenta
 ```Bash
 python src/inference.py
 python src/observability.py
-'''
+
+
