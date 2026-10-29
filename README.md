@@ -99,5 +99,9 @@ Com o ambiente virtual (`venv`) ativo, execute o script de inferência, sustenta
 ```Bash
 python src/inference.py
 python src/observability.py
+```
+<img width="884" height="594" alt="image" src="https://github.com/user-attachments/assets/f9a21522-7cdb-4d05-8ceb-83347b4885bd" />
+
+
 
 
