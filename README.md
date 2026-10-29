@@ -93,7 +93,7 @@ python src/drift_simulation.py
 
 Nesta etapa, centralizamos os logs, as métricas operacionais e a saúde do pipeline, garantindo a visibilidade completa do sistema em produção.
 
-## Como Executar no Terminal
+# Como Executar no Terminal
 Com o ambiente virtual (`venv`) ativo, execute o script de inferência, sustentação e métricas:
 
 ```Bash
