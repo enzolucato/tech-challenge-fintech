@@ -49,7 +49,9 @@ Garantir a integridade dos dados na camada de ingestão (Data Quality First) atr
 
 Utilizamos a biblioteca Pandera para definir o esquema estrito de validação do lote de dados de entrada:
 
-Idade (age): Inteiros obrigatórios entre 18 e 120 anos (ge=18, le=120). Garante a elegibilidade legal para concessão de crédito.
+Idade (age): Inteiros obrigatórios entre 18 e 120 anos (ge=18, le=120). 
+
+Garante a elegibilidade legal para concessão de crédito.
 
 Renda (income): Valor numérico contínuo estritamente maior que zero (gt=0), não sendo permitidos valores nulos (nullable=False).
 
@@ -72,6 +74,16 @@ Artefato: Modelo treinado e serializado salvo em models/baseline_model.pkl.
 ### 🚨 Simulação de Interceptação / Bloqueio (src/validate_ingestion.py)
 Para comprovar o funcionamento do contrato, simulamos a entrada de um lote corrompido (data/corrupted_data.csv) contendo clientes menores de idade, renda nula/negativa e score inválido.
 
+## 📈 Etapa 2 — Simulação de Produção e Detecção de Data Drift
+
+🛠️ Execução da Simulação (src/drift_simulation.py)
+Simulamos um ambiente de produção contendo 5.000 amostras com alteração no perfil socioeconômico dos solicitantes (induzindo drift nas variáveis age e income).Teste Estatístico: Kolmogorov-Smirnov (KS-Test).Limiar de Decisão: $p\text{-value} < 0.05$.Artefato Gerado: Relatório interativo em reports/data_drift_report.html.
+
+```text
+PowerShell
+python src/train.py
+python src/drift_simulation.py
+```
 Resultado Esperado: O pipeline dispara a exceção pa.errors.SchemaErrors, interrompendo o fluxo e garantindo que nenhum dado inconsistente chegue à camada de predição.
 
 
