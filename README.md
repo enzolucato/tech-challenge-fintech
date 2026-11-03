@@ -86,5 +86,21 @@ python src/drift_simulation.py
 ```
 Resultado Esperado: O pipeline dispara a exceção pa.errors.SchemaErrors, interrompendo o fluxo e garantindo que nenhum dado inconsistente chegue à camada de predição.
 
+## 🔍 Etapa 3 — Observabilidade de Pipelines, Infraestrutura e Modelos
+
+Centralizamos os logs, as métricas operacionais e a saúde do pipeline, garantindo a visibilidade completa do sistema em produção.
+
+### 🚀 Execução no Terminal
+Com o ambiente virtual (venv) ativo, execute os scripts de inferência e observabilidade:
+```text
+python src/inference.py
+python src/observability.py
+```
+Isso gera automaticamente:
+
+O ficheiro JSON de métricas em reports/observability_metrics.json.
+
+O painel interativo de observabilidade em reports/observability_dashboard.html.
+
 
 
