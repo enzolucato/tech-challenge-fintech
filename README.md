@@ -127,7 +127,7 @@ data_drift_report.html (Relatório detalhado do Teste KS para age e income).
 
 O painel interativo de observabilidade em reports/observability_dashboard.html.
 
-##🔒 Etapa 4 — Governança, Privacy by Design e Compliance (LGPD)
+## 🔒 Etapa 4 — Governança, Privacy by Design e Compliance (LGPD)
 
 Em conformidade com as diretrizes de Privacy by Design e Privacy by Default, este projeto foi arquitetado para garantir a máxima segurança, privacidade e conformidade regulatória no tratamento de dados para análise de risco de crédito, alinhado à Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018).
 
