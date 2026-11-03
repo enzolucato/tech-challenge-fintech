@@ -1,4 +1,4 @@
-# 🏦 Fintech Credit Scoring — Observabilidade Contínua e Governança
+## 🏦 Fintech Credit Scoring — Observabilidade Contínua e Governança
 
 Repositório desenvolvido para o Tech Challenge, focado na construção de pipelines de dados, validação de contratos rígidos, detecção de Data Drift, observabilidade operacional e governança de modelos de risco de crédito em Python 3.13.
 
