@@ -18,7 +18,7 @@ tech-challenge-fintech/
 ├── requirements.txt       # Dependências do projeto
 └── README.md              # Documentação oficial do projeto
 ```
-PowerShell
+
 ## 1. Clonar o repositório e entrar na pasta do projeto
 ```text
 cd tech-challenge-fintech-main
