@@ -41,11 +41,11 @@ pip install -r requirements.txt
 ```
 ## 🛡️ Etapa 1 — Validação de Dados, Contratos e Modelo Baseline
 
-## 🎯 Objetivo
+# 🎯 Objetivo
 
 Garantir a integridade dos dados na camada de ingestão (Data Quality First) através da definição de contratos rígidos, impedindo que dados inconsistentes ou anômalos alimentem o modelo de Credit Scoring.
 
-## 📜 Contrato de Dados (src/contracts.py)
+# 📜 Contrato de Dados (src/contracts.py)
 
 Utilizamos a biblioteca Pandera para definir o esquema estrito de validação do lote de dados de entrada:
 
@@ -69,7 +69,7 @@ Métrica de Desempenho: ROC-AUC ~0.82.
 
 Artefato: Modelo treinado e serializado salvo em models/baseline_model.pkl.
 
-## 🚨 Simulação de Interceptação / Bloqueio (src/validate_ingestion.py)
+# 🚨 Simulação de Interceptação / Bloqueio (src/validate_ingestion.py)
 Para comprovar o funcionamento do contrato, simulamos a entrada de um lote corrompido (data/corrupted_data.csv) contendo clientes menores de idade, renda nula/negativa e score inválido.
 
 Resultado Esperado: O pipeline dispara a exceção pa.errors.SchemaErrors, interrompendo o fluxo e garantindo que nenhum dado inconsistente chegue à camada de predição.
