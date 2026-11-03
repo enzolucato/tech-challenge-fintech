@@ -4,7 +4,7 @@ Repositório desenvolvido para o Tech Challenge, focado na construção de pipel
 
 ---
 
-## 📂 Estrutura do Projeto
+### 📂 Estrutura do Projeto
 
 ```text
 tech-challenge-fintech/
