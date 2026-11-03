@@ -100,6 +100,31 @@ Isso gera automaticamente:
 
 O ficheiro JSON de métricas em reports/observability_metrics.json.
 
+Isso gera automaticamente:
+
+O ficheiro JSON de métricas em reports/observability_metrics.json.
+
+O painel interativo de observabilidade em reports/observability_dashboard.html.
+
+### 📊 Evidências Visuais e Dashboards
+Para visualizar os dashboards interativos no seu navegador:
+
+Abra o Explorador de Ficheiros do Windows e navegue até a pasta reports/.
+
+Dê duplo clique em qualquer um dos ficheiros HTML:
+
+observability_dashboard.html (Painel de Saúde da Infraestrutura, Latência, Alertas e Volume).
+
+data_drift_report.html (Relatório detalhado do Teste KS para age e income).
+
+1. Painel de Observabilidade & Saúde do Pipeline
+<img width="795" height="534" alt="image" src="https://github.com/user-attachments/assets/fb39261f-98c4-4f15-941b-be3fe1ab0a52" />
+
+
+2. Relatório de Detecção de Data Drift (KS-Test)
+<img width="1222" height="361" alt="image" src="https://github.com/user-attachments/assets/9b55afe1-7ff5-43e5-b2d4-71fe74ed80a8" />
+
+
 O painel interativo de observabilidade em reports/observability_dashboard.html.
 
 
