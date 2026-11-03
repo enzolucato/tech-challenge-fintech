@@ -19,22 +19,22 @@ tech-challenge-fintech/
 └── README.md              # Documentação oficial do projeto
 ```
 
-## 1. Clonar o repositório e entrar na pasta do projeto
+### 1. Clonar o repositório e entrar na pasta do projeto
 ```text
 cd tech-challenge-fintech-main
 ```
 
-## 2. Criar o ambiente virtual (venv) isolado
+### 2. Criar o ambiente virtual (venv) isolado
 ```text
 python -m venv venv
 ```
 
-## 3. Ativar o ambiente virtual
+### 3. Ativar o ambiente virtual
 ```text
 .\venv\Scripts\Activate.ps1
 ```
 
-## 4. Atualizar o pip e instalar todas as dependências exigidas
+### 4. Atualizar o pip e instalar todas as dependências exigidas
 ```text
 python -m pip install --upgrade pip
 pip install -r requirements.txt
