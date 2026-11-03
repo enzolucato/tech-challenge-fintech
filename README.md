@@ -76,7 +76,7 @@ Para comprovar o funcionamento do contrato, simulamos a entrada de um lote corro
 
 ## 📈 Etapa 2 — Simulação de Produção e Detecção de Data Drift
 
-🛠️ Execução da Simulação (src/drift_simulation.py)
+### 🛠️ Execução da Simulação (src/drift_simulation.py)
 
 Simulamos um ambiente de produção contendo 5.000 amostras com alteração no perfil socioeconômico dos solicitantes (induzindo drift nas variáveis age e income).Teste Estatístico: Kolmogorov-Smirnov (KS-Test).Limiar de Decisão: $p\text{-value} < 0.05$.Artefato Gerado: Relatório interativo em reports/data_drift_report.html.
 
