@@ -131,7 +131,7 @@ O painel interativo de observabilidade em reports/observability_dashboard.html.
 
 Em conformidade com as diretrizes de Privacy by Design e Privacy by Default, este projeto foi arquitetado para garantir a máxima segurança, privacidade e conformidade regulatória no tratamento de dados para análise de risco de crédito, alinhado à Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018).
 
-**1** .Tratamento de Dados Pessoais e PII (Personally Identifiable Information)
+**1.** Tratamento de Dados Pessoais e PII (Personally Identifiable Information)
    
 Minimização de Dados (Data Minimization): 
 O pipeline processa exclusivamente atributos estritamente necessários para a tomada de decisão financeira (age, income, credit_score, loan_amount), evitando a recolha excessiva ou desnecessária de dados pessoais.
@@ -139,7 +139,7 @@ O pipeline processa exclusivamente atributos estritamente necessários para a to
 Anonimização e Pseudonimização: 
 Os conjuntos de dados utilizados nos ambientes de referência (treino) e produção (inferência) são desidentificados (sem nomes, CPFs, e-mails ou moradas), mitigando o risco de exposição de PII.
 
-**2** .Base Legal para a Decisão de Crédito
+**2.** Base Legal para a Decisão de Crédito
    
 Proteção ao Crédito e Execução de Contrato:
 O tratamento dos dados e a execução do modelo preditivo fundamentam-se no artigo 7º, inciso V (execução de contrato ou procedimentos preliminares) e no artigo 7º, inciso X (proteção ao crédito) da LGPD.
@@ -147,7 +147,7 @@ O tratamento dos dados e a execução do modelo preditivo fundamentam-se no arti
 Direito à Explicabilidade:
 Como o modelo implementado baseia-se em algoritmos auditáveis (XGBoost/Scikit-Learn), a instituição garante a transparência nos critérios de aprovação ou recusa de crédito, atendendo ao direito de revisão de decisões automatizadas.
 
-**3**. Plano de Retenção e Ciclo de Vida dos Dados
+**3.** Plano de Retenção e Ciclo de Vida dos Dados
 
 Limitação do Armazenamento: 
 Os dados de produção e os logs operacionais são mantidos apenas pelo período estritamente necessário para a auditoria do modelo e monitoramento de Data Drift.
