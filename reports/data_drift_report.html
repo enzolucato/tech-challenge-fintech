@@ -1,0 +1,55 @@
+
+    <html>
+    <head>
+        <title>Relatório de Data Drift - Tech Challenge</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 30px; }
+            h1 { color: #1a365d; }
+            table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+            th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+            th { background-color: #2b6cb0; color: white; }
+            tr:nth-child(even) { background-color: #f7fafc; }
+        </style>
+    </head>
+    <body>
+        <h1>Relatório de Detecção de Data Drift (KS-Test)</h1>
+        <p>Abaixo estão os resultados do teste estatístico comparando o Dataset de Referência e Produção:</p>
+        <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Feature</th>
+      <th>KS-Statistic</th>
+      <th>p-value</th>
+      <th>Drift Detectado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>age</td>
+      <td>0.340</td>
+      <td>0.0</td>
+      <td>SIM ⚠️</td>
+    </tr>
+    <tr>
+      <td>income</td>
+      <td>0.486</td>
+      <td>0.0</td>
+      <td>SIM ⚠️</td>
+    </tr>
+    <tr>
+      <td>credit_score</td>
+      <td>0.000</td>
+      <td>1.0</td>
+      <td>NÃO</td>
+    </tr>
+    <tr>
+      <td>loan_amount</td>
+      <td>0.000</td>
+      <td>1.0</td>
+      <td>NÃO</td>
+    </tr>
+  </tbody>
+</table>
+    </body>
+    </html>
+    
