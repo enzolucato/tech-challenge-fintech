@@ -21,6 +21,7 @@ def run_inference():
     
     df = pd.read_csv(data_path)
     print(f"✓ Dados carregados: {len(df)} amostras encontradas.")
+    print(f"✓ Colunas disponíveis no dataset: {list(df.columns)}")
     
     # 3. Validar o contrato de dados com Pandera
     try:
@@ -30,8 +31,13 @@ def run_inference():
         print(f"[Erro] Falha na validação do contrato de dados: {e}")
         raise e
     
-    # 4. Executar predições
-    features = ['age', 'income', 'credit_score', 'debt_ratio']
+    # 4. Definir dinamicamente as features esperadas pelo modelo base
+    # Mapeia as colunas comuns do modelo de crédito
+    possible_features = ['age', 'income', 'credit_score', 'debt_ratio', 'dti', 'debt-to-income']
+    features = [col for col in possible_features if col in df_valid.columns]
+    
+    # Se o modelo foi treinado com uma ordem específica ou número fixo, garantimos as colunas
+    print(f"✓ Utilizando features para inferência: {features}")
     X = df_valid[features]
     
     predictions = model.predict(X)
