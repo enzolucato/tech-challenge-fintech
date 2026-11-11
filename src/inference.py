@@ -21,7 +21,6 @@ def run_inference():
     
     df = pd.read_csv(data_path)
     print(f"✓ Dados carregados: {len(df)} amostras encontradas.")
-    print(f"✓ Colunas disponíveis no dataset: {list(df.columns)}")
     
     # 3. Validar o contrato de dados com Pandera
     try:
@@ -31,12 +30,14 @@ def run_inference():
         print(f"[Erro] Falha na validação do contrato de dados: {e}")
         raise e
     
-    # 4. Definir dinamicamente as features esperadas pelo modelo base
-    # Mapeia as colunas comuns do modelo de crédito
-    possible_features = ['age', 'income', 'credit_score', 'debt_ratio', 'dti', 'debt-to-income']
-    features = [col for col in possible_features if col in df_valid.columns]
+    # 4. Definir as features exatas exigidas pelo modelo XGBoost treinado
+    features = ['age', 'income', 'credit_score', 'loan_amount']
     
-    # Se o modelo foi treinado com uma ordem específica ou número fixo, garantimos as colunas
+    # Verificar se todas as colunas existem no DataFrame
+    missing_cols = [col for col in features if col not in df_valid.columns]
+    if missing_cols:
+        raise ValueError(f"As seguintes colunas exigidas pelo modelo estão em falta nos dados: {missing_cols}")
+        
     print(f"✓ Utilizando features para inferência: {features}")
     X = df_valid[features]
     
