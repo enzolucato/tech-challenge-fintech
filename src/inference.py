@@ -1,8 +1,7 @@
 ﻿import os
 import joblib
 import pandas as pd
-from contracts import ProductionDataContract
-from pydantic import ValidationError
+from contracts import CreditDataContract
 
 def run_inference():
     print("--- Iniciando Pipeline de Inferência e Validação de Contrato ---")
@@ -23,23 +22,13 @@ def run_inference():
     df = pd.read_csv(data_path)
     print(f"✓ Dados carregados: {len(df)} amostras encontradas.")
     
-    # 3. Validar o contrato de dados linha a linha (Pydantic)
-    valid_records = []
-    errors_count = 0
-    
-    for idx, row in df.iterrows():
-        try:
-            validated_row = ProductionDataContract(**row.to_dict())
-            valid_records.append(validated_row.model_dump())
-        except ValidationError as e:
-            errors_count += 1
-            print(f"[Aviso] Linha {idx} rejeitada pelo contrato de dados: {e}")
-            
-    if not valid_records:
-        raise ValueError("Nenhum registo passou na validação do contrato de dados.")
-        
-    df_valid = pd.DataFrame(valid_records)
-    print(f"✓ Validação concluída: {len(df_valid)} registos válidos, {errors_count} rejeitados.")
+    # 3. Validar o contrato de dados com Pandera
+    try:
+        df_valid = CreditDataContract.validate(df, lazy=True)
+        print(f"✓ Validação de contrato concluída com sucesso: {len(df_valid)} registos válidos.")
+    except Exception as e:
+        print(f"[Erro] Falha na validação do contrato de dados: {e}")
+        raise e
     
     # 4. Executar predições
     features = ['age', 'income', 'credit_score', 'debt_ratio']
