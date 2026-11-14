@@ -1,7 +1,8 @@
 import os
 import joblib
 import pandas as pd
-import numpy as np
+from evidently import Report
+from evidently.presets import DataDriftPreset
 from scipy.stats import ks_2samp
 from numpy.random import default_rng
 
@@ -94,6 +95,20 @@ def main():
     print("\n--- Resultados do Drift ---")
     print(drift_df.to_string(index=False))
     print(f"\n✓ Relatório HTML salvo em: '{report_output}'")
+
+
+    # 5. Relatorio adicional gerado pelo Evidently AI (API 0.7+)
+    evidently_report = Report([
+        DataDriftPreset(method="ks", threshold=0.05)
+    ])
+    evaluation = evidently_report.run(
+        current_data=prod_df[features],
+        reference_data=ref_df[features],
+    )
+    evaluation.save_html("reports/evidently_drift_report.html")
+    with open("reports/evidently_drift_report.json", "w", encoding="utf-8") as file:
+        file.write(evaluation.json())
+    print("✓ Evidently: reports/evidently_drift_report.html")
 
 
 if __name__ == "__main__":
