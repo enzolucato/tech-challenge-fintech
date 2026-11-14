@@ -86,6 +86,50 @@ python src/drift_simulation.py
 ```
 Resultado Esperado: O pipeline dispara a exceção pa.errors.SchemaErrors, interrompendo o fluxo e garantindo que nenhum dado inconsistente chegue à camada de predição.
 
+### 📊 Detecção de Data Drift com Evidently AI
+
+Complementamos a análise estatística com a biblioteca **Evidently AI**, integrada ao script `src/drift_simulation.py`, para comparar os datasets de referência e produção e gerar um relatório visual das mudanças de distribuição.
+
+**Biblioteca:** Evidently AI (`evidently>=0.7,<0.8`).
+
+**Configuração:** `DataDriftPreset(method="ks", threshold=0.05)`.
+
+**Variáveis analisadas:** `age`, `income`, `credit_score` e `loan_amount`.
+
+**Teste Estatístico:** Kolmogorov-Smirnov (KS-Test), com detecção de drift por variável quando `p-value < 0.05`.
+
+### 🚀 Execução e Artefatos Gerados
+
+Com as dependências instaladas e o modelo baseline treinado, execute:
+
+```bash
+python src/drift_simulation.py
+```
+
+Além do relatório original `reports/data_drift_report.html`, o script gera:
+
+- **`reports/evidently_drift_report.html`** — Relatório visual do Evidently com comparação das distribuições, resultados estatísticos e identificação das variáveis com drift.
+- **`reports/evidently_drift_report.json`** — Resultados da avaliação exportados em formato estruturado para consulta e possíveis integrações.
+
+### ✅ Resultados Obtidos na Simulação
+
+| Variável | Data Drift Detectado |
+| --- | --- |
+| `age` | Sim |
+| `income` | Sim |
+| `credit_score` | Não |
+| `loan_amount` | Não |
+
+O Evidently identificou drift em **2 das 4 variáveis analisadas (50%)**, correspondendo às alterações intencionais de idade e renda realizadas na simulação.
+
+O relatório também sinalizou **Dataset Drift**, considerando o limiar padrão de proporção de variáveis com drift de **0.5 (50%)**. Esse limiar é distinto do nível de significância de **0.05** utilizado no teste KS de cada variável.
+
+### 🔎 Visualização do Relatório
+
+Abra o ficheiro `reports/evidently_drift_report.html` no navegador para visualizar os gráficos e explorar os resultados por variável.
+
+**Interpretação:** A detecção de Data Drift evidencia mudanças na distribuição dos dados. Isoladamente, ela não comprova perda de desempenho do modelo, mas fornece um sinal para investigação e avaliação da necessidade de retreinamento.
+
 ## 🔍 Etapa 3 — Observabilidade de Pipelines, Infraestrutura e Modelos
 
 Centralizamos os logs, as métricas operacionais e a saúde do pipeline, garantindo a visibilidade completa do sistema em produção.
