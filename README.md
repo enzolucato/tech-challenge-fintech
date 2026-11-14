@@ -169,7 +169,7 @@ evidently_drift_report.html (Relatório visual interativo do Evidently AI).
 2. Relatório de Detecção de Data Drift (KS-Test)
 <img width="1222" height="361" alt="image" src="https://github.com/user-attachments/assets/9b55afe1-7ff5-43e5-b2d4-71fe74ed80a8" />
 
-O painel interativo de observabilidade em reports/observability_dashboard.html.
+   O painel interativo de observabilidade em reports/observability_dashboard.html.
 
 
 3. Relatório Visual Interativo (Evidently AI)
