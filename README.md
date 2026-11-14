@@ -73,18 +73,21 @@ Artefato: Modelo treinado e serializado salvo em models/baseline_model.pkl.
 
 ### 🚨 Simulação de Interceptação / Bloqueio (src/validate_ingestion.py)
 Para comprovar o funcionamento do contrato, simulamos a entrada de um lote corrompido (data/corrupted_data.csv) contendo clientes menores de idade, renda nula/negativa e score inválido.
+```bash
+python src/train.py
+python src/validate_ingestion.py
+```
+Resultado Esperado: O pipeline dispara a exceção pa.errors.SchemaErrors, interrompendo o fluxo e garantindo que nenhum dado inconsistente chegue à camada de predição.
 
 ## 📈 Etapa 2 — Simulação de Produção e Detecção de Data Drift
 
 ### 🛠️ Execução da Simulação (src/drift_simulation.py)
 
-Simulamos um ambiente de produção contendo 5.000 amostras com alteração no perfil socioeconômico dos solicitantes (induzindo drift nas variáveis age e income).Teste Estatístico: Kolmogorov-Smirnov (KS-Test).Limiar de Decisão: $p\text{-value} < 0.05$.Artefato Gerado: Relatório interativo em reports/data_drift_report.html.
+Simulamos um ambiente de produção contendo 5.000 amostras com alteração no perfil socioeconômico dos solicitantes (induzindo drift nas variáveis age e income).
 
-```text
-python src/train.py
-python src/drift_simulation.py
-```
-Resultado Esperado: O pipeline dispara a exceção pa.errors.SchemaErrors, interrompendo o fluxo e garantindo que nenhum dado inconsistente chegue à camada de predição.
+* **Teste Estatístico:** Kolmogorov-Smirnov (KS-Test).
+* **Limiar de Decisão:** $p\text{-value} < 0.05$.
+* **Artefato Gerado:** Relatório interativo em `reports/data_drift_report.html`.
 
 ### 📊 Detecção de Data Drift com Evidently AI
 
