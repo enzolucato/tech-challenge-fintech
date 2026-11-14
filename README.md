@@ -160,12 +160,18 @@ observability_dashboard.html (Painel de Saúde da Infraestrutura, Latência, Ale
 
 data_drift_report.html (Relatório detalhado do Teste KS para age e income).
 
+evidently_drift_report.html (Relatório visual interativo do Evidently AI).
+
 1. Painel de Observabilidade & Saúde do Pipeline
 <img width="795" height="534" alt="image" src="https://github.com/user-attachments/assets/fb39261f-98c4-4f15-941b-be3fe1ab0a52" />
 
 
 2. Relatório de Detecção de Data Drift (KS-Test)
 <img width="1222" height="361" alt="image" src="https://github.com/user-attachments/assets/9b55afe1-7ff5-43e5-b2d4-71fe74ed80a8" />
+O painel interativo de observabilidade em reports/observability_dashboard.html.
+
+3. Relatório Visual Interativo (Evidently AI)
+   https://github.com/enzolucato/tech-challenge-fintech/blob/main/reports/evidently_drift_report.html
 
 
 O painel interativo de observabilidade em reports/observability_dashboard.html.
