@@ -168,13 +168,11 @@ evidently_drift_report.html (Relatório visual interativo do Evidently AI).
 
 2. Relatório de Detecção de Data Drift (KS-Test)
 <img width="1222" height="361" alt="image" src="https://github.com/user-attachments/assets/9b55afe1-7ff5-43e5-b2d4-71fe74ed80a8" />
+
 O painel interativo de observabilidade em reports/observability_dashboard.html.
 
 3. Relatório Visual Interativo (Evidently AI)
-   https://github.com/enzolucato/tech-challenge-fintech/blob/main/reports/evidently_drift_report.html
-
-
-O painel interativo de observabilidade em reports/observability_dashboard.html.
+   <img width="1340" height="599" alt="evidently" src="https://github.com/user-attachments/assets/304a2e7b-dbc3-466f-ac99-e7220fadc9f8" />
 
 ## 🔒 Etapa 4 — Governança, Privacy by Design e Compliance (LGPD)
 
