@@ -201,9 +201,8 @@ python src/observability.py
 
 O script de inferência carrega os dados de produção, aplica o contrato, seleciona as features do modelo e gera predições e probabilidades de inadimplência.
 
-**Artefatos gerados:**
+**Artefatos de observabilidade gerados:**
 
-- **`reports/inference_results.csv`** — Resultados da inferência, incluindo `prediction` e `default_probability`.
 - **`reports/observability_metrics.json`** — Indicadores utilizados pelo painel demonstrativo.
 - **`reports/observability_dashboard.html`** — Painel HTML de observabilidade.
 
