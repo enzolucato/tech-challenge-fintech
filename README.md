@@ -147,10 +147,6 @@ Isso gera automaticamente:
 
 O ficheiro JSON de métricas em reports/observability_metrics.json.
 
-Isso gera automaticamente:
-
-O ficheiro JSON de métricas em reports/observability_metrics.json.
-
 O painel interativo de observabilidade em reports/observability_dashboard.html.
 
 ### 📊 Evidências Visuais e Dashboards
